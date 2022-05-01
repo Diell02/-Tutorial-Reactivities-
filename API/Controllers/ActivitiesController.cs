@@ -4,14 +4,12 @@ using System.Threading.Tasks;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
 using Application.Activities;
-using System.Threading;
 
 namespace API.Controllers
 {
 
     public class ActivitiesController : BaseApiController
     {
-
         [HttpGet]
         public async Task<ActionResult<List<Activity>>> GetActivities()
         {
@@ -31,7 +29,6 @@ namespace API.Controllers
         }
 
         [HttpPut("{id}")]
-
         public async Task<IActionResult> EditActivity(Guid id, Activity activity)
         {
             activity.Id = id;
@@ -39,7 +36,6 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
-
         public async Task<IActionResult> DeleteActivity(Guid id)
         {
             return Ok(await Mediator.Send(new Delete.Command{Id = id}));
