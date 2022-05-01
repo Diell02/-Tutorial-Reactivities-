@@ -11,7 +11,13 @@ export default function NavBar() {
                 </Menu.Item>
                 <Menu.Item name='Activities'/>
                 <Menu.Item>
-                    <Button positive content='Create Activitiy'/>
+                <Button positive content='Create Activity'/>
+                    {/*<Button.Group style={{marginLeft:'400px'}}>
+                    <Button positive content='Nxenes' style={{marginLeft:'10px'}}/>
+                    <Button positive content='Prind' style={{marginLeft:'10px'}}/>
+                    <Button positive content='Mesimdhenes' style={{marginLeft:'10px'}}/>
+                    <Button positive content='StafM' style={{marginLeft:'10px'}}/>
+                    </Button.Group>*/}
                 </Menu.Item>
             </Container>
         </Menu>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Activity } from '../models/activity';
-import { Container, List } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import NavBar from './NavBar';
 import ActivityDashboard from '../../features/activities/Dashboard/ActivityDashboard';
 
@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <Container style={{marginTop: '7em'}}>
+      <Container style={{marginTop: '10em'}}>
         <ActivityDashboard activities={activities}/>
       </Container>
     </>
