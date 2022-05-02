@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Activity } from '../models/activity';
 import { Container } from 'semantic-ui-react';
 import NavBar from './NavBar';
 import ActivityDashboard from '../../features/activities/Dashboard/ActivityDashboard';
 import {v4 as uuid} from 'uuid';
+import agent from '../api/Agent';
 
 function App() {
 
@@ -13,8 +13,8 @@ function App() {
   const[editMode, setEditMode] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/activities').then(response => {
-      setActivities(response.data);
+    agent.Activities.list().then(response => {
+      setActivities(response);
     })
   }, [])
 
