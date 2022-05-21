@@ -10,6 +10,7 @@ import ActivityDetailedInfo from './ActivityDetailedInfo';
 import ActivityDetailedSidebar from './ActivityDetailedSidebar';
 
 
+
 export default observer( function ActivityDetails () {
   const {activityStore} = useStore();
   const {selectedActivity: activity, loadActivity, loadingInitial} = activityStore;
@@ -24,8 +25,8 @@ export default observer( function ActivityDetails () {
     return(
         <Grid>
           <Grid.Column width={10}>
-            <ActivityDetailedHeader/>
-            <ActivityDetailedInfo/>
+            <ActivityDetailedHeader activity={activity}/>
+            <ActivityDetailedInfo activity={activity}/>
             <ActivityDetailedChat/>
           </Grid.Column>
           <Grid.Column width={6}>
