@@ -10,7 +10,7 @@ export default function HomePage() {
                     <Image size='massive' src='/assets/logo.png' alt='logo' style={{marginBottom: 12}}/>
                     SIMTS
                </Header>
-               <Header as='h2' ivnerted content='Welcome to SIMTS' />
+               <Header as='h2' inverted content='Welcome to SIMTS' />
                <Button as={Link} to='/activities' size='huge' inverted>
                    Take me to the Activities!
                </Button>
