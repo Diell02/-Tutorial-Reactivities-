@@ -9,7 +9,7 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220605115708_CommentEntityAdded")]
+    [Migration("20220605143850_CommentEntityAdded")]
     partial class CommentEntityAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -153,7 +153,7 @@ namespace Persistence.Migrations
                     b.Property<string>("Body")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("CreateAt")
+                    b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

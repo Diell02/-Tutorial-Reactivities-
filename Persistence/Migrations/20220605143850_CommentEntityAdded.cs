@@ -16,7 +16,7 @@ namespace Persistence.Migrations
                     Body = table.Column<string>(type: "TEXT", nullable: true),
                     AuthorId = table.Column<string>(type: "TEXT", nullable: true),
                     ActivityId = table.Column<Guid>(type: "TEXT", nullable: true),
-                    CreateAt = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
